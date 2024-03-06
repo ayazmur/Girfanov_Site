@@ -9,9 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/tips.js"></script>
+    <script src="../js/modal.js"></script> <!-- Подключаем скрипт для работы с модальным окном -->
+
+    <script>
+        // Этот код будет выполняться при загрузке страницы
+        window.onload = function() {
+            // Получаем случайный совет и вставляем его на страницу
+            document.getElementById("tipOfTheDay").innerText = getRandomTip();
+        };
+    </script>
     <title>Document</title>
 </head>
 <body>
+
+    
+
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -23,13 +36,16 @@
                 </button>
                 <ul class="menu">
                     <li class="menu-item">
-                        <a href="#" class="menu-link">Что нового</a>
+                        <a href="#news" class="menu-link">Что нового</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#" class="menu-link">Цвет</a>
+                        <a href="#color" class="menu-link">Цвет</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#" class="menu-link">Заказать</a>
+                        <a href="#contacts" class="menu-link">Заказать</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#tips" class="menu-link">Советы</a>
                     </li>
                 </ul>
                 <a class="logo">
@@ -47,7 +63,7 @@
                 <a class="headline-btn" href="#">ВЫБРАТЬ</a>
             </div>
         </section>
-        <section class="news">
+        <section class="news", id = "news">
             <div class="container">
                 <h2 class="news-title">ЧТО НОВОГО</h2>
                 <div class="news-info">
@@ -69,7 +85,22 @@
                 </div>
             </div>
         </section>
-        <section class="color">
+
+
+        <section class="news", id = "tips">
+            <div class="container">
+                <h2 class="news-title">Совет дня</h2>
+                <div class="news-info">
+                    <div class="news-text">
+                        <p id="tipOfTheDay"></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <section class="color", id="color">
             <div class="container">
                 <h2 class="color-title">ВЫБЕРИТЕ СВОЙ ЦВЕТ</h2>
                 <ul class="color-list">
@@ -96,7 +127,7 @@
                 </ul>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts", id="contacts">
             <div class="container">
                 <div class="contacts-inner">
                     <form class="contacts-form" action="#">
@@ -123,5 +154,8 @@
         </div>
         <script src="../js/main.js"></script>
     </footer>
+    
+    <script src="../js/main.js"></script> <!-- Подключаем ваш основной скрипт -->
+
 </body>
 </html>
