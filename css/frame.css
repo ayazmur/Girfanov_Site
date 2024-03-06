@@ -1,0 +1,25 @@
+/* Стили для фреймов */
+.frame {
+    border: 2px solid #0A0A0A; /* Граница фрейма */
+    padding: 20px; /* Отступ внутри фрейма */
+    background-color: #F5F5F7; /* Цвет фона фрейма */
+    color: #717171; /* Цвет текста в фрейме */
+    font-family: 'Inter', sans-serif; /* Шрифт текста */
+    font-size: 16px; /* Размер текста */
+}
+
+/* Стили для кнопок в фреймах */
+.frame-button {
+    padding: 10px 20px; /* Размеры кнопки */
+    font-size: 16px; /* Размер текста кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    background-color: #490e84; /* Цвет фона кнопки */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 5px; /* Скругление углов кнопки */
+    cursor: pointer; /* Указатель при наведении на кнопку */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+}
+
+.frame-button:hover {
+    background-color: #6d2ab8; /* Цвет фона кнопки при наведении */
+}
